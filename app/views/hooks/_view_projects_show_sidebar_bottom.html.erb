@@ -1,7 +1,7 @@
 <% if User.current.allowed_to?(:bigbluebutton_join, project) || User.current.allowed_to?(:bigbluebutton_start, project) %>
 
   <% if bbb.getinfo %>
-    <% help_link = bbb.help_url.empty? ? "" : "&nbsp;&nbsp;" + link_to("", bbb.help_url, :target => "_blank", :class => "icon icon-help") %>
+    <% help_link = bbb.help_url.blank? ? "" : "&nbsp;&nbsp;" + link_to("", bbb.help_url, :target => "_blank", :class => "icon icon-help") %>
     <h3><%= l(:label_bigbluebutton) %><%= help_link.html_safe %></h3>
 
     <% bbb_start_url = url_for(:controller => 'bbb', :action => 'start', :project_id => project, :only_path => true) %>
