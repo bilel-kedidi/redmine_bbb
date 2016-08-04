@@ -11,7 +11,7 @@ class Bbb
 
     @help_url = Setting.plugin_redmine_bbb['bbb_help']
     @back_url = Setting.plugin_redmine_bbb['bbb_url']
-    @server = Setting.plugin_redmine_bbb['bbb_ip'].empty? ? Setting.plugin_redmine_bbb['bbb_server'] : Setting.plugin_redmine_bbb['bbb_ip']
+    @server = Setting.plugin_redmine_bbb['bbb_ip'].blank? ? Setting.plugin_redmine_bbb['bbb_server'] : Setting.plugin_redmine_bbb['bbb_ip']
     @popup = Setting.plugin_redmine_bbb['bbb_popup']
   end
 
